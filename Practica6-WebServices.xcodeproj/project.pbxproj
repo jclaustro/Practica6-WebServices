@@ -14,6 +14,9 @@
 		42D711A2215B0CC7006A390B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42D711A0215B0CC7006A390B /* LaunchScreen.storyboard */; };
 		42D711AD215B0CC7006A390B /* Practica6_WebServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D711AC215B0CC7006A390B /* Practica6_WebServicesTests.swift */; };
 		42D711B8215B0CC7006A390B /* Practica6_WebServicesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D711B7215B0CC7006A390B /* Practica6_WebServicesUITests.swift */; };
+		42D711C6215B2202006A390B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D711C5215B2202006A390B /* UserViewController.swift */; };
+		42D711C8215B265B006A390B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D711C7215B265B006A390B /* MapViewController.swift */; };
+		42D711CB215B27A1006A390B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D711CA215B27A1006A390B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		42D711B3215B0CC7006A390B /* Practica6-WebServicesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Practica6-WebServicesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D711B7215B0CC7006A390B /* Practica6_WebServicesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica6_WebServicesUITests.swift; sourceTree = "<group>"; };
 		42D711B9215B0CC7006A390B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42D711C5215B2202006A390B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		42D711C7215B265B006A390B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		42D711CA215B27A1006A390B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D711CB215B27A1006A390B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				42D711AB215B0CC7006A390B /* Practica6-WebServicesTests */,
 				42D711B6215B0CC7006A390B /* Practica6-WebServicesUITests */,
 				42D71195215B0CC5006A390B /* Products */,
+				42D711C9215B27A1006A390B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +108,8 @@
 				42D71197215B0CC5006A390B /* AppDelegate.swift */,
 				42D71199215B0CC6006A390B /* ViewController.swift */,
 				42D7119B215B0CC6006A390B /* Main.storyboard */,
+				42D711C7215B265B006A390B /* MapViewController.swift */,
+				42D711C5215B2202006A390B /* UserViewController.swift */,
 				42D7119E215B0CC7006A390B /* Assets.xcassets */,
 				42D711A0215B0CC7006A390B /* LaunchScreen.storyboard */,
 				42D711A3215B0CC7006A390B /* Info.plist */,
@@ -123,6 +133,14 @@
 				42D711B9215B0CC7006A390B /* Info.plist */,
 			);
 			path = "Practica6-WebServicesUITests";
+			sourceTree = "<group>";
+		};
+		42D711C9215B27A1006A390B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42D711CA215B27A1006A390B /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +211,11 @@
 				TargetAttributes = {
 					42D71193215B0CC5006A390B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					42D711A7215B0CC7006A390B = {
 						CreatedOnToolsVersion = 10.0;
@@ -257,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D7119A215B0CC6006A390B /* ViewController.swift in Sources */,
+				42D711C6215B2202006A390B /* UserViewController.swift in Sources */,
 				42D71198215B0CC5006A390B /* AppDelegate.swift in Sources */,
+				42D711C8215B265B006A390B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "udg.Practica6-WebServices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -460,7 +485,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "udg.Practica6-WebServices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
